@@ -1,6 +1,5 @@
 import sqlite3
 from sqlite3 import Error
-from tkinter.messagebox import NO
 
 def create_connection(path='default_test_db.sqlite'):
     conn = None
@@ -18,3 +17,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+    
