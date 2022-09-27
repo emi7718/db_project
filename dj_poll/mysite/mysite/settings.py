@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'polls.apps.PollsConfig' # added by programmer, not belonging to defalult config
+    'polls.apps.PollsConfig' # added by programmer, not belonging to default config
 ]
 
 MIDDLEWARE = [
