@@ -5,7 +5,7 @@
         <title>Details Page</title>
     </head>
     <body>
-        <form action="% url 'polls:vote question.id %" method="post">
+        <form action="{% url 'polls:vote' question.id %}" method="post">
             {% csrf_token %}
             <fieldset>
                 <legend>
@@ -14,7 +14,7 @@
                     </h1>
                 </legend>
                 {% if error_message %}<p>
-                    ><strong>
+                    <strong>
                         {{error_message}}
                     </strong>
                 </p>
@@ -22,7 +22,7 @@
                 {% for choice in question.choice_set.all %}
                     <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{choice.id}}">
                     <label for="choice{{ forloop.counter }}" >
-                        {{choice.choice_set}}
+                        {{choice.choice_text}}
                     </label>
                     <br>
                 {% endfor %}
